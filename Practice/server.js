@@ -7,6 +7,7 @@ app.use(express.json())
 
 connectDB()
 
+
 app.post("/task", async(req, res) => {
     let {task, completed, date} = req.body
     await taskModel.create({
